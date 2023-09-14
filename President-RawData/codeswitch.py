@@ -6,7 +6,6 @@ from googletrans import Translator
 import time
 
 translator = Translator()
-timeout = 30
 
 df=pd.read_csv('President-RawData/pmarcos.csv')
 
