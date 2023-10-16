@@ -4,7 +4,7 @@ import nltk
 import preprocessor as p
 import time
 
-final=pd.read_csv('pangilinanTrans.csv')
+final=pd.read_csv('Testing/VPs/duterteLabel.csv')
 X=final['translated']
 
 # stop words, stemming, taking out punctuation marks, converting to lowercase, removing links, emojis, & hashtags

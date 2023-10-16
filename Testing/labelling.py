@@ -2,7 +2,7 @@ import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 nltk.download("vader_lexicon")
 import pandas as pd
-data = pd.read_csv("VP/phelecTrans.csv")
+data = pd.read_csv("VP/sottoTrans.csv")
 data = data.dropna()
 #print(data.head())
 
@@ -29,4 +29,4 @@ print(data.head())
 
 print(data["Sentiment"].value_counts())
 
-data.to_csv("Testing/test_data.csv")
+data.to_csv("Testing/VPs/sottoLabel.csv")
