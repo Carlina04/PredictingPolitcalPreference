@@ -8,7 +8,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load data
-data = pd.read_csv("President-PP/robredoPP.csv")
+data = pd.read_csv("VP-PreProcessed/sottoPP.csv")
 
 # Filter out Neutral sentiment
 no_neu = data[data["Sentiment"] != 'Neutral']
@@ -34,10 +34,10 @@ predicted_logistic = model_logistic.predict(X_test)
 # Evaluation
 mat = confusion_matrix(y_test, predicted_logistic)
 sns.heatmap(mat.T, annot=True, fmt='d', cbar=False)
-plt.title('Confusion Matrix for Logistic Regression')
+plt.title('Sotto Confusion Matrix for Logistic Regression')
 plt.xlabel('True label')
 plt.ylabel('Predicted label')
-plt.savefig("P-Models/Logistic_Regression/robredo_Matrix.png")
+plt.savefig("VP-Models/Logistic_Regression/Sotto_Matrix.png")
 plt.show()
 
 score_logistic = accuracy_score(predicted_logistic, y_test)
