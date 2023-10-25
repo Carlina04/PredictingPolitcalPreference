@@ -34,11 +34,11 @@ predicted_svm = model_svm.predict(X_test)
 # Evaluation
 mat = confusion_matrix(y_test, predicted_svm)
 sns.heatmap(mat.T, annot=True, fmt='d', cbar=False)
-plt.title('Confusion Matrix for SVM')
+plt.title('Pacquiao Confusion Matrix for SVM')
 plt.xlabel('True label')
 plt.ylabel('Predicted label')
 plt.show()
-plt.savefig("P-Models/SVM/pacquiao_Matrix.png")
+plt.savefig("P-Models/SVM/Pacquiao_Matrix.png")
 
 score_svm = accuracy_score(predicted_svm, y_test)
 print("Accuracy with Support Vector Machine: ", score_svm)
