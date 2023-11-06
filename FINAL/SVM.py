@@ -8,7 +8,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load data
-data = pd.read_csv("President-PP/pacquiaoPP.csv")
+data = pd.read_csv("FINAL/ph_elections.csv")
 
 # Filter out Neutral sentiment
 no_neu = data[data["Sentiment"] != 'Neutral']
@@ -34,11 +34,11 @@ predicted_svm = model_svm.predict(X_test)
 # Evaluation
 mat = confusion_matrix(y_test, predicted_svm)
 sns.heatmap(mat.T, annot=True, fmt='d', cbar=False)
-plt.title('Pacquiao Confusion Matrix for SVM')
+plt.title('PH Election Matrix for SVM')
 plt.xlabel('True label')
 plt.ylabel('Predicted label')
 plt.show()
-plt.savefig("P-Models/SVM/Pacquiao_Matrix.png")
+plt.savefig("FINAL/SVM_PH_ELEC.png")
 
 score_svm = accuracy_score(predicted_svm, y_test)
 print("Accuracy with Support Vector Machine: ", score_svm)

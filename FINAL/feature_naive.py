@@ -5,7 +5,7 @@ import gensim
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("President-PP/pacquiaoPP.csv")
+data = pd.read_csv("FINAL/ph_elections.csv")
 no_neu = data[data["Sentiment"] != 'Neutral'] #only picking out tweets with either POSITIVE or NEGATIVE sentament
 
 bow_vectorizer = CountVectorizer(max_df=0.90 ,min_df=2 , max_features=1000,stop_words='english')
@@ -32,10 +32,10 @@ plt.figure(dpi=600)
 mat = confusion_matrix(y_test, predicted_naive)
 sns.heatmap(mat.T, annot=True, fmt='d', cbar=False)
 
-plt.title('Pacquiao Confusion Matrix for Naive Bayes')
+plt.title('PH Elections Confusion Matrix for Naive Bayes')
 plt.xlabel('true label')
 plt.ylabel('predicted label')
-plt.savefig("P-Models/Naive_Bayes/Pacquiao_Matrix.png")
+plt.savefig("FINAL/NB_PH_ELEC.png")
 plt.show()
 
 from sklearn.metrics import accuracy_score

@@ -1,8 +1,8 @@
 #Vaues 
-true_positives = 243
-false_positives = 73
-false_negatives = 157
-true_negatives = 778
+true_positives = 1239
+false_positives = 710
+false_negatives = 660
+true_negatives = 3434
 
 # Calculate precision as a percentage
 precision = (true_positives / (true_positives + false_positives)) * 100
